@@ -1,0 +1,29 @@
+@model Empleado
+
+<h1 class="text-center">Nuevo Empleado</h1>
+<br><br>
+
+<form asp-action="Empleadoslist" method="post" class="text-center">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div>
+        <label class="from-label " for="Nombre">Empleado</label><br>
+        <input asp-for="Nombre" placeholder="Escriba el Nombre">
+        <span asp-validation-for="Nombre"></span>
+    </div>
+    <div>
+        <label for="Apellido">Apellido</label><br>
+        <input asp-for="Apellido" placeholder="Escriba el Apellido">
+             <span asp-validation-for="Apellido"></span>
+    </div>
+    <div>
+        <label for="Departamento">Departamento</label><br>
+        <input asp-for="Departamento" placeholder="Escriba el Departamento">
+        <span asp-validation-for="Departamento"></span>
+    </div>
+    <div>
+        <label for="Puesto">Puesto</label><br>
+        <input asp-for="Puesto" placeholder="Escriba el Puesto">
+             <span asp-validation-for="Puesto"></span>
+    </div><br>
+    <button class="btn btn-primary mb-3" asp-action="Registro">Guardar</button>
+</form>

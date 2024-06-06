@@ -1,0 +1,44 @@
+
+@model List<Empleado>
+
+<div class="text-center">
+    <h1> Listado de Empleados</h1>
+    <a asp-controller="Empleados" asp-action="EmpleadosAdd" class="btn btn-primary mb-3">Agregar Empleado</a>
+    <hr size="4">
+
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Departamento</th>
+            <th>Puesto</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var Empleado in Model)
+        {
+            <tr>
+                <td>@Empleado.Id</td>
+                <td>@Empleado.Nombre</td>
+                <td>@Empleado.Apellido</td>
+                <td>@Empleado.Departamento</td>
+                <td>@Empleado.Puesto</td>
+                <td>
+                    <a class="btn btn-primary mb-3">Editar</a>
+                    <a class="btn btn-primaty mb-3">Borrar</a>
+                </td>
+            </tr>
+        }
+
+
+
+    </tbody>
+
+</table>
+
+<br><br><br><br><br><br><br>
